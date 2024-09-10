@@ -3,9 +3,39 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Thalles Page</title>
+        <title>Thalles Cansi - Portfolio</title>
+        <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        Eu amo o Rafael! 💘
+        <header>
+            <span class="thalles">Thalles</span><span class="cansi">Cansi</span>
+            <nav>
+                <button class="theme-toggle" id="themeToggle">
+                    <img id="themeIcon" src="images/light_mode.svg" alt="Alterar tema" />
+                </button>
+            </nav>
+        </header>
+
+        <h1>Hi, I'm Thalles. I'm a fullstack developer.</h1>
+
+        <div class="social-icons">
+            <a href="https://github.com" target="_blank"><img src="images/Github.svg" alt="GitHub" /></a>
+            <a href="https://linkedin.com" target="_blank"><img src="images/Linkedin.svg" alt="LinkedIn" /></a>
+        </div>
+
+        <script>
+            const themeToggle = document.getElementById("themeToggle");
+            const themeIcon = document.getElementById("themeIcon");
+            const body = document.body;
+
+            themeToggle.addEventListener("click", () => {
+                body.classList.toggle("dark-mode");
+                if (body.classList.contains("dark-mode")) {
+                    themeIcon.src = "images/dark_mode.svg";
+                } else {
+                    themeIcon.src = "images/light_mode.svg";
+                }
+            });
+        </script>
     </body>
 </html>
